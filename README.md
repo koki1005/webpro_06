@@ -15,15 +15,16 @@ console.log('Hello');
 ```
 
 ```mermaid
-frowchart TD;
-start["開始"];
-end1["終了"]
-if{"条件に合うか"}
-win["勝ち"]
-loose["負け"]
-start --> if
-if -->|yes| win
-win --> end1
-if -->|no| loose
-loose --> end1
+flowchart TD;
+    start["開始"]
+    end1["終了"]
+    if{"条件に合うか"}
+    win["勝ち"]
+    lose["負け"]
+    
+    start --> if
+    if -->|yes| win
+    win --> end1
+    if -->|no| lose
+    lose --> end1
 ```
