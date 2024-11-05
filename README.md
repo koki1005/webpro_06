@@ -21,7 +21,6 @@ end1["終了"]
 if{"条件に合うか"}
 win["勝ち"]
 loose["負け"]
-
 start --> if
 if -->|yes| win
 win --> end1
