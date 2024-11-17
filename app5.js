@@ -1,7 +1,9 @@
-const express = require("express");
+const express = require('express');
 const app = express();
+const path = require('path');
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/hello1", (req, res) => {
@@ -68,4 +70,27 @@ app.get("/janken", (req, res) => {
   res.render('janken', display);
 });
 
-app.listen(8080, () => console.log("Example app listening on port 8080!"));
+app.get('/nazonazo', (req, res) => {
+  const userAnswer = req.query.text ? req.query.text.trim() : ''; 
+  const correctAnswer = 'ふらいぱん'; 
+
+  let resultMessage = '';  
+
+  if (userAnswer) {
+    if (userAnswer === correctAnswer) {
+      resultMessage = '正解！よくできました！';
+    } else {
+      resultMessage = '残念、不正解です。';
+    }
+  }
+
+  res.render('nazonazo', { resultMessage: resultMessage });
+});
+
+app.get("/dentaku", (req, res) => {
+  res.render('dentaku');  
+});
+
+app.listen(8080, () => {
+  console.log("Example app listening on port 8080!");
+});

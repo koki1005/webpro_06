@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易電卓</title>
+</head>
+<body>
+    <h1>簡易電卓</h1>
+    <p>数字を入力してください</p>
+
+    <label for="num1">数字1:</label>
+    <input type="number" id="num1" placeholder="最初の数字" required>
+
+    <label for="num2">数字2:</label>
+    <input type="number" id="num2" placeholder="次の数字" required>
+
+    <h3>演算子を選んでください</h3>
+    <input type="radio" id="add" name="operation" value="+" checked>
+    <label for="add">和 (+)</label><br>
+
+    <input type="radio" id="subtract" name="operation" value="-">
+    <label for="subtract">差 (-)</label><br>
+
+    <input type="radio" id="multiply" name="operation" value="*">
+    <label for="multiply">積 (×)</label><br>
+
+    <input type="radio" id="divide" name="operation" value="/">
+    <label for="divide">商 (÷)</label><br>
+
+    <button onclick="calculateResult()">計算</button>
+
+    <p id="result"></p>
+
+    <script src="/webpro_06"></script>
+</body>
+</html>

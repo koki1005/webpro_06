@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>なぞなぞ</title>
+</head>
+<body>
+    <h2>以下のなぞなぞの答えををひらがなで回答してください</h2>
+    <p>問題: 「パンはパンでも食べられないパンはなーんだ？」</p>
+    
+    <form action="/nazonazo" method="get">
+        <input type="text" name="text" placeholder="ここに答えを入力">
+        <input type="submit" value="回答">
+    </form>
+
+    <% if (resultMessage) { %>
+        <p><%= resultMessage %></p>
+    <% } %>
+</body>
+</html>
