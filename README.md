@@ -286,7 +286,7 @@ flowchart TD;
     a --> z
     z --> b
     b --> c
-    c -- no --> f
+    c -- no --> d
     d -- no --> e
     e -- no --> f
     f -- no --> m
